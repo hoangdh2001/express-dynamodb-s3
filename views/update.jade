@@ -1,0 +1,9 @@
+extends layout
+
+block content 
+    div 
+        form(action="/update", method="post", enctype='multipart/form-data', class='form', style='width: 200px;')
+            input(type="text", name='product_id', placeholder='Ma san pham', hidden, value=#product.product_id)
+            input(type="text", name='name', placeholder='Ten san pham', value=#product.name)
+            input(type="text", name='amount', placeholder='So luong', value=#product.amount)
+            input(type="submit", value="Sua")
